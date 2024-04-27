@@ -10,20 +10,17 @@
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Получаем числа из формы
         $num1 = $_POST["num1"];
         $num2 = $_POST["num2"];
 
-        // Умножение чисел
         $result = $num1 * $num2;
         
-        // Вывод процесса умножения в столбик
         echo "&nbsp;" . $num1 . "<br>";
         echo "x " . "<br>";
         echo "&nbsp;" . $num2 . "<br>";
         echo "-------<br>";
         
-        $num2_digits = str_split(strrev($num2)); // Разбиваем второе число на цифры
+        $num2_digits = str_split(strrev($num2));
         $num2_length = strlen($num2);
         $padding = 0;
         
